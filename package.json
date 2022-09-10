@@ -1,6 +1,6 @@
 {
 	"name": "stmoor-website",
-	"homepage": "http://stefanimoore.com",
+	"homepage": "https://stefanimoore.com",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
