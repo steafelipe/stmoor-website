@@ -1,6 +1,6 @@
 {
 	"name": "stmoor-website",
-	"homepage": "https://steafelipe.github.io/stmoor-website",
+	"homepage": "http://stefanimoore.com",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
