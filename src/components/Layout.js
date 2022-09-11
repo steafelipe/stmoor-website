@@ -3,18 +3,13 @@ import { Divider, Drawer } from "@mui/material";
 import Box from "@mui/material/Box";
 import Profile from "./Profile";
 import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import AppBar from "@mui/material/AppBar";
 import DrawerOptions from "./DrawerOptions";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
 import DvrIcon from "@mui/icons-material/Dvr";
 import SchoolIcon from "@mui/icons-material/School";
-import HideOnScroll from "./HideOnScroll";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Header from "./Header";
 
 const drawerWidth = 260;
 
@@ -67,6 +62,10 @@ const Layout = (props) => {
 
 	return (
 		<Box sx={{ display: "flex" }}>
+			<Header
+				handleDrawerToggle={handleDrawerToggle}
+				drawerWidth={drawerWidth}
+			/>
 			<Drawer
 				sx={{
 					xs: "block",
@@ -97,30 +96,6 @@ const Layout = (props) => {
 			>
 				{drawer}
 			</Drawer>
-			<HideOnScroll>
-				<AppBar
-					position="fixed"
-					sx={{
-						width: { sm: `calc(100% - ${drawerWidth}px)` },
-						ml: { sm: `${drawerWidth}px` },
-					}}
-				>
-					<Toolbar>
-						<IconButton
-							color="inherit"
-							aria-label="open drawer"
-							edge="start"
-							onClick={handleDrawerToggle}
-							sx={{ mr: 2, display: { sm: "none" } }}
-						>
-							<MenuIcon />
-						</IconButton>
-						<Typography variant="h6" noWrap component="div">
-							Stefani Moore's Portfolio
-						</Typography>
-					</Toolbar>
-				</AppBar>
-			</HideOnScroll>
 		</Box>
 	);
 };
