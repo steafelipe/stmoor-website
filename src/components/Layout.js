@@ -1,49 +1,14 @@
 import React from "react";
-import { Divider, Drawer } from "@mui/material";
+import { Divider, Drawer, Toolbar } from "@mui/material";
 import Box from "@mui/material/Box";
 import Profile from "./Profile";
 import { useState } from "react";
 import DrawerOptions from "./DrawerOptions";
-import HomeWorkIcon from "@mui/icons-material/HomeWork";
-import DvrIcon from "@mui/icons-material/Dvr";
-import SchoolIcon from "@mui/icons-material/School";
-import EmailIcon from "@mui/icons-material/Email";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { drawerOptions, profileInfo, workExperience } from "../data/Data";
 import Header from "./Header";
+import WorkExperienceContainer from "./WorkExperienceContainer";
 
 const drawerWidth = 260;
-
-const drawerOptions = {
-	experience: {
-		text: "Work Experience",
-		icon: HomeWorkIcon,
-	},
-	technologies: {
-		text: "Technologies & Skills",
-		icon: DvrIcon,
-	},
-	education: {
-		text: "Education",
-		icon: SchoolIcon,
-	},
-};
-
-const profileInfo = {
-	name: "Stefani Moore",
-	title: "Full Stack Software Engineer",
-	contact: {
-		email: {
-			text: "ste.afelipe@gmail.com",
-			icon: EmailIcon,
-			href: "mailto:ste.afelipe@gmail.com",
-		},
-		linkedIn: {
-			text: "LinkedIn",
-			icon: LinkedInIcon,
-			href: "https://www.linkedin.com/in/moorestefani/",
-		},
-	},
-};
 
 const Layout = (props) => {
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -63,8 +28,8 @@ const Layout = (props) => {
 	return (
 		<Box sx={{ display: "flex" }}>
 			<Header
-				handleDrawerToggle={handleDrawerToggle}
 				drawerWidth={drawerWidth}
+				handleDrawerToggle={handleDrawerToggle}
 			/>
 			<Drawer
 				sx={{
@@ -96,6 +61,12 @@ const Layout = (props) => {
 			>
 				{drawer}
 			</Drawer>
+			<Box sx={{ p: 3, display: "flex", ml: { sm: `${drawerWidth}px` } }}>
+				<Toolbar />
+				<WorkExperienceContainer
+					data={workExperience}
+				></WorkExperienceContainer>
+			</Box>
 		</Box>
 	);
 };
