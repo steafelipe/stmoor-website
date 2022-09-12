@@ -61,8 +61,9 @@ const Layout = (props) => {
 			>
 				{drawer}
 			</Drawer>
-			<Box sx={{ p: 3, display: "flex", ml: { sm: `${drawerWidth}px` } }}>
-				<Toolbar />
+			<Box
+				sx={{ paddingTop: 10, display: "flex", ml: { sm: `${drawerWidth}px` } }}
+			>
 				<WorkExperienceContainer
 					data={workExperience}
 				></WorkExperienceContainer>
