@@ -5,14 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import { Button } from "@mui/material";
-
-const handleDownload = () => {
-	const link = document.createElement("a");
-	link.download = `Stefani_Moore_Resume.pdf`;
-	link.href = "../../public/Stefani_Moore_Resume.pdf";
-	link.click();
-};
+import { Button, Link } from "@mui/material";
 
 const Header = ({ drawerWidth, handleDrawerToggle }) => (
 	<AppBar
@@ -39,11 +32,13 @@ const Header = ({ drawerWidth, handleDrawerToggle }) => (
 			<Button
 				color="inherit"
 				aria-label="download resume"
-				onClick={handleDownload}
+				href="../../public/Stefani_Moore_Resume.pdf"
 				float="left"
+				component={Link}
+				download="Stefani_Moore_Resume.pdf"
 				startIcon={<FileDownloadIcon />}
 			>
-				Download Resume
+				Resume
 			</Button>
 		</Toolbar>
 	</AppBar>
