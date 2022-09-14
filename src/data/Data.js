@@ -3,19 +3,26 @@ import DvrIcon from "@mui/icons-material/Dvr";
 import SchoolIcon from "@mui/icons-material/School";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Avatar } from "@mui/material";
+import microsoftLogo from "../static/Microsoft_logo.png";
+import uniMarylandLogo from "../static/University_of_Maryland_logo.png";
+import unitedSolutionsLogo from "../static/UnitedSolutions_logo.jpeg";
 
 export const drawerOptions = {
 	experience: {
 		text: "Work Experience",
 		icon: HomeWorkIcon,
+		href: "#workExperience",
 	},
 	technologies: {
 		text: "Technologies & Skills",
 		icon: DvrIcon,
+		href: "#techAndSkills",
 	},
 	education: {
 		text: "Education",
 		icon: SchoolIcon,
+		href: "#education",
 	},
 };
 
@@ -48,6 +55,7 @@ export const workExperience = [
 			"Utilize a data driven approach to drive improvements to the product",
 			"Improve user experience by delivering fixes to bugs and customer feedback tickets",
 		],
+		logo: microsoftLogo,
 	},
 	{
 		duration: "07/2018-02/2022",
@@ -62,6 +70,7 @@ export const workExperience = [
 			"Engage with product users to identify areas for improvement",
 			"Mentor and manage three interns by training them on company tools and DevOps to deliver a mobile app",
 		],
+		logo: microsoftLogo,
 	},
 	{
 		duration: "08/2016-05/2018",
@@ -74,6 +83,7 @@ export const workExperience = [
 			"Hold weekly office hours",
 			"Tutor students attending Objected-Oriented Programming I and II through the Maryland Center for Women in Computing",
 		],
+		logo: uniMarylandLogo,
 	},
 	{
 		duration: "08/2015-12/2015",
@@ -85,5 +95,6 @@ export const workExperience = [
 			"Lead product development team to create an online networking platform prototype",
 			"Met directly with the customer to demo website designs",
 		],
+		logo: unitedSolutionsLogo,
 	},
 ];

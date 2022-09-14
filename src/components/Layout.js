@@ -62,7 +62,12 @@ const Layout = (props) => {
 				{drawer}
 			</Drawer>
 			<Box
-				sx={{ paddingTop: 10, display: "flex", ml: { sm: `${drawerWidth}px` } }}
+				sx={{
+					paddingTop: 10,
+					display: "flex",
+					flexGrow: 1,
+					ml: { sm: `${drawerWidth}px` },
+				}}
 			>
 				<WorkExperienceContainer
 					data={workExperience}

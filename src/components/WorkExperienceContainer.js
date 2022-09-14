@@ -7,37 +7,52 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { Box } from "@mui/system";
-import { Divider, Grid, List, ListItem, Typography } from "@mui/material";
+import { Divider, Grid, Typography, Avatar } from "@mui/material";
+import WorkExperienceDescription from "./WorkExperienceDescription";
+import WorkExperienceHeader from "./WorkExperienceHeader";
 
-const WorkExperienceContainer = ({ data }) => (
-	<Timeline align="left" sx={{ width: "100%" }}>
-		{data.map((item, index) => (
-			<TimelineItem>
-				<TimelineOppositeContent sx={{ width: 50 }} style={{ flex: 0.3 }}>
-					{item.duration}
-				</TimelineOppositeContent>
-				<TimelineSeparator>
-					<TimelineDot />
-					<TimelineConnector />
-				</TimelineSeparator>
-				<TimelineContent sx={{ width: 1200 }}>
-					<Grid container spacing={1}>
-						<Grid item xs={2.5}>
-							<Typography>{item.company}</Typography>
-						</Grid>
-						<Divider orientation="vertical" variant="middle" flexItem />
-						<Grid item xs={5.5}>
-							<Typography>{item.title}</Typography>
-						</Grid>
-						<Divider orientation="vertical" variant="middle" flexItem />
-						<Grid item xs={2}>
-							<Typography>{item.location}</Typography>
-						</Grid>
-					</Grid>
-				</TimelineContent>
-			</TimelineItem>
-		))}
-	</Timeline>
-);
+const WorkExperienceContainer = ({ data }) => {
+	return (
+		<Box>
+			<Grid container sx={{ position: "relative", top: "-100px" }}>
+				<Grid item id="workExperience">
+					<Typography
+						variant="h4"
+						sx={{ marginLeft: 10, position: "relative", top: "100px" }}
+					>
+						Work Experience
+					</Typography>
+				</Grid>
+			</Grid>
+			<Timeline align="left" sx={{ width: "100%", marginLeft: -15 }}>
+				{data.map((item, index) => (
+					<TimelineItem key={index}>
+						<TimelineOppositeContent style={{ flex: 0.3 }}>
+							{item.duration}
+						</TimelineOppositeContent>
+						<TimelineSeparator>
+							<TimelineDot sx={{ padding: item.logo ? 0 : 2 }}>
+								{item.logo && (
+									<Avatar
+										sx={{ width: 30, height: 30 }}
+										alt="time line company icon"
+										src={item.logo}
+									/>
+								)}
+							</TimelineDot>
+							{index !== data.length - 1 && <TimelineConnector />}
+						</TimelineSeparator>
+						<TimelineContent>
+							<Grid container spacing={1} style={{ width: "100%" }}>
+								<WorkExperienceHeader {...item} />
+								<WorkExperienceDescription data={item.description} />
+							</Grid>
+						</TimelineContent>
+					</TimelineItem>
+				))}
+			</Timeline>
+		</Box>
+	);
+};
 
 export default WorkExperienceContainer;

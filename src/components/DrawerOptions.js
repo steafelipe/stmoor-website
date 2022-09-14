@@ -11,7 +11,7 @@ const DrawerOptions = ({ options }) => (
 	<List>
 		{Object.values(options).map((options, index) => (
 			<ListItem key={index} disablePadding>
-				<ListItemButton>
+				<ListItemButton href={options.href}>
 					<ListItemIcon>
 						<options.icon />
 					</ListItemIcon>
