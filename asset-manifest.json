@@ -1,17 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.a692aa86.js",
+    "main.js": "/static/js/main.bc07a546.js",
     "static/js/787.ba6358c8.chunk.js": "/static/js/787.ba6358c8.chunk.js",
+    "static/media/University_of_Maryland_logo.png": "/static/media/University_of_Maryland_logo.67d97996b7a6895471fc.png",
     "static/media/profile.jpg": "/static/media/profile.1f4dc4871e355a633142.jpg",
+    "static/media/Microsoft_logo.png": "/static/media/Microsoft_logo.92682d13b222b32c4833.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.a692aa86.js.map": "/static/js/main.a692aa86.js.map",
+    "main.bc07a546.js.map": "/static/js/main.bc07a546.js.map",
     "787.ba6358c8.chunk.js.map": "/static/js/787.ba6358c8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.a692aa86.js"
+    "static/js/main.bc07a546.js"
   ]
 }
