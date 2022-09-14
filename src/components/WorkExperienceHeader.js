@@ -1,12 +1,13 @@
 import React from "react";
-import useTheme from "@mui/material/styles/useTheme";
-import useMediaQuery from "@mui/material/useMediaQuery";
+
 import { Divider, Grid, Typography } from "@mui/material";
 
-const WorkExperienceHeader = ({ title, company, location }) => {
-	const theme = useTheme();
-	const matchesMediumSizeScreen = useMediaQuery(theme.breakpoints.up("md"));
-
+const WorkExperienceHeader = ({
+	title,
+	company,
+	location,
+	matchesMediumSizeScreen,
+}) => {
 	return (
 		<>
 			<Grid item xs={matchesMediumSizeScreen ? 5.5 : 12}>
